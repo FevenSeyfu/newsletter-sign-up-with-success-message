@@ -115,6 +115,18 @@ label span.error-message {
   font-weight: 700;
   line-height: 18px;
 }
+.form-content input.error{
+  background: #FF615526;
+  border: 1px solid #FF6155;
+  color: #FF6155;
+}
+input.error::placeholder{
+  color: #FF6155;
+}
+input[type="email"].error:focus {
+  outline: 1px solid #FF6155;
+  border: 1px solid #FF6155;
+}
 /* success message section */
 #success-message {
   display: none;
