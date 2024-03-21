@@ -1,3 +1,11 @@
+
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -11,21 +19,27 @@ body {
 .container {
   box-shadow: 0px 15px 60px 0px #00000040;
   border-radius: 1rem;
-  height: 80vh;
+  height: 85vh;
   padding: 1rem;
+  padding-left: 0;
 }
 
 .signup-form {
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
   gap: 4rem;
 }
+
 .illustration-image {
   height: 80vh;
 }
 .form-content {
   width: 45%;
-  padding: 1rem 0;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .form-content,
@@ -37,7 +51,7 @@ form {
 .form-content h1 {
   font-size: 56px;
   font-weight: 700;
-  line-height: 6px;
+  line-height: 32px;
 }
 .form-content ul {
   padding: 0;
@@ -63,7 +77,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-top: 2.5rem;
 }
 form label {
   font-size: 12px;
@@ -115,17 +128,17 @@ label span.error-message {
   font-weight: 700;
   line-height: 18px;
 }
-.form-content input.error{
-  background: #FF615526;
-  border: 1px solid #FF6155;
-  color: #FF6155;
+.form-content input.error {
+  background: #ff615526;
+  border: 1px solid #ff6155;
+  color: #ff6155;
 }
-input.error::placeholder{
-  color: #FF6155;
+input.error::placeholder {
+  color: #ff6155;
 }
 input[type="email"].error:focus {
-  outline: 1px solid #FF6155;
-  border: 1px solid #FF6155;
+  outline: 1px solid #ff6155;
+  border: 1px solid #ff6155;
 }
 /* success message section */
 #success-message {
@@ -133,10 +146,68 @@ input[type="email"].error:focus {
 }
 /* mobile style */
 @media only screen and (max-width: 768px) {
+  .container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    box-shadow: none;
+    border: none;
+  }
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .illustration-image {
+    content: url(src/assets/images/illustration-sign-up-mobile.svg);
+    width: 100vw;
+    height: auto;
+  }
+  .form-content {
+    width: 100%;
+    color: #242742;
+    text-align: left;
+    padding: 0 24px;
+    text-wrap: wrap;
+  }
+  .form-content h1 {
+    font-size: 40px;
+    line-height: 12px;
+  }
+  .form-content p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    padding-right: 24px;
+  }
+  .form-content ul li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+  form {
+    margin-top: 1rem;
+    margin-right: 48px ;
+    gap: 5px;
+  }
+  form label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+  form input{
+    padding: 1rem;
+    margin-bottom: 5px;
+  }
 }
 
 /* footer  */
 .attribution {
+  position: fixed;
   bottom: 0;
   font-size: 11px;
   text-align: center;
