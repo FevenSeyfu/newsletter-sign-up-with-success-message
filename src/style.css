@@ -49,9 +49,10 @@ form {
 }
 
 .form-content h1 {
-  font-size: 56px;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 32px;
+  text-wrap: nowrap;
 }
 .form-content ul {
   padding: 0;
