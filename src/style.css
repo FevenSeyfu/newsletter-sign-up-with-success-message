@@ -1,6 +1,4 @@
-
-*{
-
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,19 +12,19 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
-  
 }
 
 .container {
   box-shadow: 0px 15px 60px 0px #00000040;
   border-radius: 1rem;
-  height: 85vh;
+  height: auto;
+  width: auto;
   padding: 1rem;
   padding-left: 0;
 }
 
 .signup-form {
-  display: flex;
+  display: none;
   flex-direction: row-reverse;
   align-items: start;
   gap: 4rem;
@@ -49,7 +47,7 @@ form {
   color: #242742;
 }
 
-.form-content h1 {
+h1 {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 32px;
@@ -145,26 +143,50 @@ input[type="email"].error:focus {
   border: 1px solid #ff6155;
 }
 /* success message section */
+.container.success {
+  width: 40vw;
+  padding: 3rem 4rem;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
 #success-message {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  color: #242742;
+  text-align: left;
+  text-wrap: wrap;
+  gap: 2rem;
+}
+#success-message h1 {
+  text-wrap: wrap;
+  line-height: 3.5rem;
+}
+#success-message img {
+  width: 64px;
+  height: 64px;
+}
+#success-message p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+#success-message .registered-email {
+  font-weight: 700;
 }
 /* mobile style */
 @media only screen and (max-width: 768px) {
-  body{
+  body {
     width: 100vw;
     height: 100vh;
   }
   .container {
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
     box-shadow: none;
     border: none;
     margin-bottom: 3rem;
   }
   .signup-form {
-    display: flex;
     flex-direction: column;
     gap: 2rem;
   }
@@ -175,7 +197,7 @@ input[type="email"].error:focus {
     object-fit: cover;
     object-position: center;
   }
-  form{
+  form {
     padding-bottom: 1rem;
   }
   .form-content {
@@ -186,7 +208,7 @@ input[type="email"].error:focus {
     text-wrap: wrap;
     padding-bottom: 1rem;
   }
-  .form-content h1 {
+  h1 {
     font-size: 40px;
     line-height: 40px;
   }
@@ -212,10 +234,37 @@ input[type="email"].error:focus {
     font-weight: 700;
     line-height: 18px;
   }
-  form input{
+  form input {
     margin-bottom: 0.5rem;
   }
 
+  /* success message section */
+  .container.success {
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem 1.5rem;
+    border-radius: none;
+    margin-bottom: 1rem;
+    padding-top: 5rem;
+  }
+  #success-message {
+    display: flex;
+    flex-direction: column;
+    color: #242742;
+    text-align: left;
+    text-wrap: wrap;
+    gap: 2rem;
+  }
+  #success-message h1 {
+    text-wrap: wrap;
+    line-height: 40px;
+  }
+  #success-message p {
+    line-height: 24px;
+  }
+  #success-message button{
+    margin-top: 8rem;
+  }
 }
 
 /* footer  */
