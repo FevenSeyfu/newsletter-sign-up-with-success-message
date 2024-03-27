@@ -20,7 +20,7 @@
     />
   </head>
   <body>
-    <div class="container success">
+    <div class="container">
       <!-- Sign-up form start -->
       <section id="signup-form" class="signup-form">
         <div class="illustration">
@@ -49,20 +49,20 @@
           </ul>
           <form action="">
             <label for="email">Email address 
-              <!-- <span class="error-message">Valid email address</span> -->
+              <span class="error-message hidden">Valid email address</span>
             </label>
             <input type="email" placeholder="email@company.com" 
             required
             />
 
-            <button>Subscribe to monthly newsletter</button>
+            <button type="submit" disabled>Subscribe to monthly newsletter</button>
           </form>
         </main>
       </section>
       <!-- Sign-up form end -->
 
       <!-- Success message start -->
-      <section id="success-message">
+      <section id="success-message" class="hidden">
         <img
           src="src/assets/images/icon-success.svg"
           alt="success-icon"
