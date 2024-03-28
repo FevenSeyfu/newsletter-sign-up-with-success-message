@@ -1,6 +1,7 @@
 # Frontend Mentor - Newsletter sign-up form with success message solution
 
-This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv).A simple UI with form to receive  email and check if email format is correct show success message if not valid it shows an error. 
+![Project Demo](./newsletter-demo.webm)
+This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv).A simple UI with form to receive email and check if email format is correct show success message if not valid it shows an error.
 
 ## Table of contents
 
@@ -14,7 +15,6 @@ This is a solution to the [Newsletter sign-up form with success message challeng
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
 
 ## Overview
 
@@ -32,71 +32,60 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/FevenSeyfu/newsletter-sign-up-with-success-message)
+- Live Site URL: [Live Site URL](https://newsletter-signup-feven.netlify.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
+- HTML5
 - CSS custom properties
-- Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Typescript](https://www.typescriptlang.org/)
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+With this project I have delved into typescript specifically  event handling and form validation with typescript.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+<form action="">
+  <label for="email"
+    >Email address
+    <span class="error-message hidden">Valid email required</span>
+  </label>
+  <input type="email" placeholder="email@company.com" required />
+  <button type="submit" disabled>Subscribe to monthly newsletter</button>
+</form>
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```ts
+  const validateEmail = (email: string) => {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailPattern.test(email);
+  };
+  signupFormInput?.addEventListener("input", (e: Event) => {
+    validateEmail((e.target as HTMLInputElement).value)
+      ? handleValidEmail()
+      : handleInvalidEmail();
+  });
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I want to expand my skill on typescript event handling and add more validation to the form input.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Typescript documentation](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) - This guide, typescript for Javascript programmers helped me to type my functions, events as well as event listeners. I really liked this  and will continue to use it going forward.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Feven Seyfu](https://fevenseyfu.tech)
+- Frontend Mentor - [@FevenSeyfu](https://www.frontendmentor.io/profile/FevenSeyfu)
+- Twitter - [@FevenSeyfu](https://www.twitter.com/FevenSeyfu)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+I have completed this challenge as part of Womenwhocode frontend, #frontendfriday challenge I would like to thank the community for the feedback as well as the  continued support and thanks to Frontendmentor for the design files.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
