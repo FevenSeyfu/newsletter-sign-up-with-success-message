@@ -206,7 +206,7 @@ input[type="email"].error:focus {
     gap: 2rem;
   }
   .illustration-image {
-    content: url(src/assets/images/illustration-sign-up-mobile.svg);
+    content: url(./assets/images/illustration-sign-up-mobile.svg);
     width: 100vw;
     height: 40vh;
     object-fit: cover;
