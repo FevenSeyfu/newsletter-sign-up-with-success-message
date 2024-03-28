@@ -1,6 +1,7 @@
+
+![Project Demo](https://github.com/FevenSeyfu/newsletter-sign-up-with-success-message/blob/main/newsletter-demo.webm)
 # Frontend Mentor - Newsletter sign-up form with success message solution
 
-![Project Demo](./newsletter-demo.webm)
 This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv).A simple UI with form to receive email and check if email format is correct show success message if not valid it shows an error.
 
 ## Table of contents
