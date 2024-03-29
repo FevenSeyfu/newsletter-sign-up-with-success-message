@@ -121,8 +121,9 @@ button {
   text-align: center;
 }
 button:disabled, button:disabled:hover{
-  background: #24274240;
+  background: #242742;
   color: white;
+  opacity: 0.8;
   cursor: not-allowed;
   box-shadow: none;
 }
