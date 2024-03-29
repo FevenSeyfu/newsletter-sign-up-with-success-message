@@ -57,5 +57,7 @@ successMessageDismissButton?.addEventListener("click", () => {
     successMessage?.classList.add("hidden");
     signupForm?.classList.remove("hidden");
     container?.classList.remove("success");
+    // reset form
     signupFormInput && (signupFormInput.value = '');
+    signupButton?.setAttribute("disabled", "true");
 });
