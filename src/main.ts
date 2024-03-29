@@ -1,4 +1,16 @@
 import "./style.css";
+import iconListSvg from './assets/images/icon-list.svg';
+import iconSuccessSvg from './assets/images/icon-success.svg';
+
+//set icons
+// class="check-icon"
+const SuccessSvg = document.getElementById('iconSuccessSvg') as HTMLImageElement;
+SuccessSvg && (SuccessSvg.src = iconSuccessSvg);
+const checkIcons = document.querySelectorAll('.check-list img');
+checkIcons.forEach((checkIcon) => {
+  const icon = checkIcon as HTMLImageElement;
+  icon && (icon.src = iconListSvg);
+});
 let email: string | undefined;
 const container = document.getElementsByClassName("container")[0];
 const signupForm = document.getElementById("signup-form");
