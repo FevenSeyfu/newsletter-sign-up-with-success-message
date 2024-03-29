@@ -106,6 +106,7 @@ form input {
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 1rem;
+  height: 56px;
 }
 form input:hover {
   border: 1px solid #242742;
@@ -126,6 +127,7 @@ button {
   border: #242742;
   cursor: pointer;
   text-align: center;
+  height: 56px;
 }
 button:disabled,
 button:disabled:hover {
