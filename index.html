@@ -9,7 +9,7 @@
     <meta property="og:description" content="Frontend Mentor Newsletter sign-up form with success message challenge solution with Typescript">
     <meta property="og:url" content="https://newsletter-signup-feven.netlify.app/">
     <meta property="og:type" content="website">
-    <meta property="og:image" itemprop="image" content="src/assets/images/desktop-design.jpg">
+    <meta property="og:image" content="src/assets/images/desktop-design.jpg">
     <meta property="og:image:alt" content="Newsletter signup form image Card">
     <meta name="author" content="Feven Seyfu">
 
@@ -32,14 +32,15 @@
   <body>
     <div class="container">
       <!-- Sign-up form start -->
-      <section id="signup-form" class="signup-form">
-        <header class="illustration">
+      <div id="signup-form" class="signup-form">
+        <figure class="illustration">
           <img
             src="src/assets/images/illustration-sign-up-desktop.svg"
             alt="illustration image"
             class="illustration-image"
           />
-        </header>
+          <figcaption>Illustration Image</figcaption>
+        </figure>
         <main class="form-content">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -57,9 +58,9 @@
               <p>And much more!</p>
             </li>
           </ul>
-          <form action="">
+          <form>
             <label for="email">Email address 
-              <span class="error-message hidden">Valid email required</span>
+              <span class="error-message hidden" id="email">Valid email required</span>
             </label>
             <input type="email" placeholder="email@company.com" 
             required
@@ -68,7 +69,7 @@
             <button type="submit" disabled>Subscribe to monthly newsletter</button>
           </form>
         </main>
-      </section>
+      </div>
       <!-- Sign-up form end -->
 
       <!-- Success message start -->
