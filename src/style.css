@@ -276,7 +276,7 @@ input[type="email"].error:focus {
     padding: 2rem 1.5rem;
     border-radius: none;
     margin-bottom: 1rem;
-    padding-top: 5rem;
+    padding-top: 149px;
   }
   #success-message h1 {
     text-wrap: wrap;
@@ -286,7 +286,7 @@ input[type="email"].error:focus {
     line-height: 24px;
   }
   #success-message button {
-    margin-top: 8rem;
+    margin-top: 40%;
   }
 }
 
